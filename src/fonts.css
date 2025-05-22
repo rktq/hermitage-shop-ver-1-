@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Ouroboros';
+    src: url('/fonts/ouroboros_regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .font-gilroy {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 300;
+  }
+  
+  .font-ouroboros {
+    font-family: 'Ouroboros', serif;
+    font-weight: 400;
+  }
+  
+  .font-source-serif {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 300;
+  }
+  
+  .font-source-serif-semibold {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+  }
+  

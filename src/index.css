@@ -1,0 +1,740 @@
+@import "./fonts.css";
+
+/* ---------- БАЗА ---------- */
+body {
+  background: #FDFDFD;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy', Arial, sans-serif;
+  color: #222;
+}
+
+/* ---------- HEADER ---------- */
+.glass-header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  background: rgba(255,255,255,0.58);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 2px 24px 0 rgba(70, 14, 16, 0.07);
+}
+.glass-header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.2rem;
+  padding: 0 60px;
+}
+.glass-logo {
+  height: 72px;
+  max-width: 200px;
+  width: auto;
+  object-fit: contain;
+}
+.glass-nav-outer {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.glass-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  min-width: max-content;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.glass-nav::-webkit-scrollbar { display: none; }
+.glass-nav-btn {
+  min-width: 130px;
+  background: none;
+  border: none;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 22px;
+  color: #9B2734;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  padding: 7px 18px;
+  border-radius: 22px;
+  transition: background 0.2s, color 0.2s;
+  flex: 0 0 auto;
+}
+.glass-nav-btn:hover {
+  background: #f3e2e4;
+  color: #c12b46;
+}
+.glass-cart-btn {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 22px;
+  background: #9B2734cc;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 13px 36px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(155, 39, 52, 0.13);
+  transition: background 0.2s, color 0.2s;
+  font-weight: 400;
+}
+.glass-cart-btn:hover {
+  background: #c12b46;
+  color: #fff;
+}
+
+/* ---------- MAIN PAGE И ЗАГОЛОВКИ ---------- */
+.mainpage {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 16px 0 16px;
+}
+.main-section { margin-bottom: 42px; }
+.section-title {
+  font-family: 'Ouroboros', serif;
+  font-size: 96px;
+  color: #9B2734;
+  text-align: center;
+  margin: 0 0 36px 0;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 98vw;
+  overflow-wrap: break-word;
+}
+
+/* ---------- КАРТОЧКИ ТОВАРА ---------- */
+.main-products-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.product-card-main {
+  width: 280px;
+  min-width: 260px;
+  max-width: 320px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 20px 20px;
+  align-items: stretch;
+  position: relative;
+  margin-bottom: 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.product-card-main:hover {
+  box-shadow: 0 9px 48px 0 rgba(155, 39, 52, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.product-img-main {
+  width: 100%;
+  height: 128px;
+  object-fit: contain;
+  margin-bottom: 28px;
+  background: transparent;
+  display: block;
+}
+.product-title-main {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #9B2734;
+  margin-bottom: 16px;
+}
+.product-desc-main {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #444;
+  margin-bottom: 14px;
+  min-height: 48px;
+}
+.product-card-bottom-fixed {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+.product-card-bottom-fixed > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-weight-main {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #969696;
+  margin-bottom: 3px;
+  margin-left: 2px;
+}
+.product-price-main {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #9B2734;
+  line-height: 1.08;
+  white-space: nowrap;
+  margin-bottom: 2px;
+}
+.add-cart-btn-main {
+  min-width: 150px;
+  width: 150px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #9B2734;
+  background: #fff;
+  border: 2px solid #9B2734;
+  border-radius: 22px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border 0.15s;
+  margin-left: auto;
+}
+.add-cart-btn-main:hover {
+  background: #9B2734;
+  color: #fff;
+  border: 2px solid #9B2734;
+}
+
+/* ---------- КОРЗИНА ---------- */
+.cart-page {
+  max-width: 700px;
+  margin: 2.5rem auto 1rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(155, 39, 52, 0.09);
+  padding: 2.1rem 1.3rem 2rem 1.3rem;
+}
+
+.cart-title {
+  color: #9B2734;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.cart-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 0.7rem 0.4rem;
+  border-bottom: 1px solid #f1e5e7;
+}
+.cart-item-name { flex: 2 1 0; }
+.cart-item-price, .cart-item-qty {
+  flex: 1 0 80px;
+  text-align: center;
+  color: #9B2734;
+  font-weight: 600;
+}
+.cart-item-controls { display: flex; gap: 0.5rem; }
+
+/* ---------- КНОПКИ КОРЗИНЫ ---------- */
+.cart_button {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 1.08rem;
+  padding: 0.68rem 2.1rem;
+  border-radius: 22px;
+  border: 2px solid #9B2734;
+  background: #fff;
+  color: #9B2734;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.cart_button:hover {
+  background: #9B2734;
+  color: #fff;
+}
+.cart_button.gray {
+  color: #9B2734;
+  background: #fff;
+  border: 2px solid #9B2734;
+}
+.cart_button.gray:hover {
+  background: #9B2734;
+  color: #fff;
+}
+.cart_button.pink,
+.cart_button.checkout {
+  background: #9B2734;
+  color: #fff;
+  border: 2px solid #9B2734;
+}
+.cart_button.pink:hover,
+.cart_button.checkout:hover {
+  background: #fff;
+  color: #9B2734;
+}
+.cart_button.back {
+  border: 2px solid #9B2734;
+  color: #9B2734;
+  background: #fff;
+  padding: 0.65rem 1.8rem;
+}
+.cart_button.back:hover {
+  background: #9B2734;
+  color: #fff;
+}
+
+/* ---------- КОРЗИНА: Блоки и выравнивание ---------- */
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.7rem;
+  margin-bottom: 2.2rem;
+}
+.cart-total {
+  display: flex;
+  align-items: center;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #222;
+  gap: 1rem;
+}
+.cart-sum { color: #9B2734; font-size: 1.22rem; }
+.cart-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1.8rem;
+  gap: 1.5rem;
+}
+.cart-bottom-left,
+.cart-bottom-right {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.cart-bottom-right { justify-content: flex-end; }
+
+/* ---------- CHECKOUT ---------- */
+/* Основная обертка checkout */
+.checkout-root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 90vh;
+  background: #fdfdfd;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.checkout-left {
+  flex: 1 1 420px;
+  max-width: 520px;
+}
+
+.checkout-logo {
+  width: 260px;
+  margin-bottom: 18px;
+}
+
+.checkout-back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.16rem;
+  color: #222;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.checkout-back-link:hover { color: #9B2734; }
+.checkout-title {
+  font-family: 'Source Serif Pro', serif;
+  color: #9B2734;
+  font-size: 2.6rem;
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.checkout-form { display: flex; flex-direction: column; gap: 1.4rem; }
+.checkout-field { display: flex; flex-direction: column; gap: 0.6rem; }
+.checkout-label { font-size: 1.12rem; color: #222; opacity: 0.83; margin-bottom: 3px; }
+.checkout-input {
+  font-size: 1.1rem;
+  padding: 0.62rem 1.1rem;
+  border-radius: 13px;
+  border: 1.5px solid #9B2734;
+  background: #FDFDFD;
+  color: #222;
+  outline: none;
+  font-family: 'Gilroy', Arial, sans-serif;
+  transition: border 0.2s;
+  resize: none;
+}
+
+.checkout-input:focus { border-color: #9B2734; }
+.order-btn {
+  margin-top: 1.2rem;
+  width: 100%;
+  font-size: 1.13rem;
+  padding: 1rem 0;
+  background: #9B2734;
+  color: #fff;
+  border-radius: 22px;
+  border: none;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.order-btn:hover { background: #fff; color: #9B2734; border: 2px solid #9B2734; }
+
+/* ---------- CHECKOUT SUMMARY ---------- */
+/* Правая часть — summary */
+.checkout-summary {
+  flex: 1 1 340px;
+  max-width: 380px;
+  background: #9B2734;
+  color: #fff;
+  border-radius: 24px;
+  padding: 32px 34px 30px 34px;
+  box-shadow: 0 8px 36px rgba(155, 39, 52, 0.15);
+  font-size: 1.15rem;
+  min-width: 290px;
+}
+.summary-title {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+.summary-list { display: flex; flex-direction: column; gap: 22px; }
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+.summary-item-title {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 1.19rem;
+  font-weight: 600;
+  color: #fff;
+}
+.summary-item-desc {
+  font-size: 0.97rem;
+  color: #e6c9c9;
+  margin-top: 3px;
+}
+.summary-item-price {
+  font-size: 1.18rem;
+  color: #fff;
+  font-weight: 600;
+  min-width: 70px;
+  text-align: right;
+}
+.summary-divider {
+  border-bottom: 1.5px solid #e8b8b8;
+  margin: 18px 0 13px 0;
+}
+.summary-details-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.03rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.38rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  width: 100%;
+  background: #FDFDFD;
+  border-top: 1.5px solid #f0f0f0;
+  padding: 1.5rem 0 0.8rem 0;
+  margin-top: 3rem;
+  color: #222;
+  font-size: 1rem;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1.2rem;
+}
+.footer-brand { display: flex; align-items: center; gap: 1rem; }
+.footer-logo { height: 38px; width: auto; }
+.footer-title { color: #9B2734; font-size: 1.1rem; font-weight: 700; }
+.footer-contacts { display: flex; flex-direction: column; gap: 0.45rem; font-size: 1rem; }
+.footer-contacts a { color: #9B2734; text-decoration: none; transition: color 0.2s; }
+.footer-contacts a:hover { color: #ec4899; }
+.footer-copyright { text-align: center; font-size: 0.96rem; color: #888; margin-top: 1.1rem; letter-spacing: 0.03em; }
+
+/* ---------- АДАПТИВНОСТЬ ---------- */
+@media (max-width: 1200px) {
+  .mainpage, .main-products-row { max-width: 1000px; }
+  .product-card-main { width: 220px; }
+}
+@media (max-width: 1024px) {
+  .mainpage, .main-products-row { max-width: 750px; }
+  .product-card-main { width: 48%; min-width: 290px; max-width: 350px; }
+}
+@media (max-width: 900px) {
+  .mainpage, .main-products-row { max-width: 98vw; }
+  .product-card-main { width: 47%; min-width: 220px; max-width: 360px; }
+  .glass-nav { gap: 18px; padding-right: 4px; font-size: 18px; }
+  .glass-header-content { padding: 0 12px; height: 74px; }
+  .section-title { font-size: 56px; }
+}
+@media (max-width: 700px) {
+  .glass-header-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem;
+    min-height: unset;
+    gap: 0.7rem;
+    height: auto;
+  }
+  .glass-logo { height: 42px; max-width: 120px; }
+  .mainpage, .main-products-row { max-width: 100vw; padding: 0 2vw; }
+  .product-card-main { width: 100%; min-width: unset; max-width: unset; }
+  .footer-content { flex-direction: column; align-items: flex-start; gap: 1.2rem; padding: 0 0.7rem; }
+  .footer-title { font-size: 1rem; }
+  .section-title { font-size: 32px; padding: 0 6px; }
+  .cart-actions { flex-direction: column; gap: 0.8rem; align-items: stretch; }
+}
+
+/* ---- МЕДИАЗАПРОСЫ ---- */
+@media (max-width: 700px) {
+  .cart-page {
+    max-width: 100vw;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1.1rem 0.7rem 1.5rem 0.7rem;
+    border-radius: 12px;
+  }
+  .cart-title { font-size: 1.25rem; margin-bottom: 1.2rem; }
+  .cart-list { margin-bottom: 1rem; }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.65rem 0.15rem;
+  }
+  .cart-item-name, .cart-item-price, .cart-item-qty {
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+  .cart-item-controls {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .cart-total-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    margin-bottom: 1.3rem;
+  }
+  .cart-total {
+    justify-content: flex-end;
+    font-size: 1.09rem;
+  }
+  .cart-bottom-row {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.1rem;
+    align-items: stretch;
+  }
+  .cart-bottom-left, .cart-bottom-right {
+    justify-content: stretch;
+    width: 100%;
+  }
+  .cart_button,
+  .cart_button.back,
+  .cart_button.gray,
+  .cart_button.checkout {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 0.78rem 0;
+    font-size: 1.06rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media (max-width: 410px) {
+  .cart-page {
+    padding: 0.5rem 0.1rem 1rem 0.1rem;
+  }
+}
+
+/* ---- Планшеты ---- */
+@media (min-width: 700px) {
+  .checkout-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 42px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .checkout-left {
+    max-width: 520px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .checkout-summary {
+    max-width: 380px;
+    min-width: 260px;
+    padding: 32px 34px 30px 34px;
+    font-size: 1.15rem;
+  }
+  .checkout-logo {
+    width: 250px;
+    margin-bottom: 18px;
+  }
+  .checkout-title {
+    font-size: 2.6rem;
+    margin-bottom: 36px;
+  }
+}
+
+/* ---- Большие экраны ---- */
+@media (min-width: 1100px) {
+  .checkout-container {
+    max-width: 1200px;
+    gap: 70px;
+  }
+}
+
+/* ----------- ADAPTIVE CHECKOUT PAGE ----------- */
+
+@media (max-width: 1024px) {
+  .checkout-container {
+    gap: 24px;
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .checkout-logo {
+    width: 180px;
+  }
+  .checkout-summary {
+    max-width: 340px;
+    padding: 22px 18px 20px 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .checkout-container {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 99vw;
+    gap: 32px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .checkout-left,
+  .checkout-summary {
+    max-width: 100%;
+    flex: unset;
+  }
+  .checkout-summary {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 18px;
+    padding: 22px 16px 20px 16px;
+    min-width: unset;
+  }
+  .checkout-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .summary-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout-root {
+    padding: 0;
+    min-height: unset;
+  }
+  .checkout-logo {
+    width: 120px;
+    margin: 0 auto 14px auto;
+    display: block;
+  }
+  .checkout-title {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+  .checkout-container {
+    padding: 0 1vw;
+    gap: 18px;
+  }
+  .checkout-summary {
+    border-radius: 13px;
+    padding: 13px 7px 13px 7px;
+    font-size: 1.01rem;
+  }
+  .summary-title {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+  .summary-item-title {
+    font-size: 0.99rem;
+  }
+  .summary-item-desc {
+    font-size: 0.79rem;
+  }
+  .summary-item-price {
+    font-size: 1rem;
+    min-width: 50px;
+  }
+  .summary-divider { margin: 9px 0 8px 0; }
+  .summary-total-row { font-size: 1.01rem; }
+  .order-btn { padding: 0.8rem 0; font-size: 1rem; }
+  .checkout-input { font-size: 1rem; padding: 0.44rem 0.7rem; }
+  .checkout-label { font-size: 1rem; }
+}
